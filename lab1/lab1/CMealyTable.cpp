@@ -60,7 +60,7 @@ Graph CMealyTable::ToGraph() const
 		for (size_t j = 0; j < line.size(); j++)
 		{
 			std::string edgeLabel = 'x' + std::to_string(i + 1) + "/y" + std::to_string(line[j].output);
-			boost::add_edge(vertexArr[i], vertexArr[line[j].state], { edgeLabel }, graph);
+			boost::add_edge(vertexArr[j], vertexArr[line[j].state], { edgeLabel }, graph);
 		}
 	}
 
